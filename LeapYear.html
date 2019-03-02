@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LeapYear</title>
+</head>
+<body>
+<script>
+    let year = parseInt(prompt("enter year"));
+    let leapYear = false;
+    let divBy4 = year % 4 == 0;
+    if (divBy4) {
+        let divBy100 = year % 100 == 0;
+        if (divBy100) {
+            let divBy400 = year % 400 == 0;
+            if (divBy400) {
+                leapYear = true;
+            }
+        }else {
+            leapYear= true;
+        }
+    }
+
+    if (leapYear) {
+        alert(year + " la nam nhuan")
+    }else{
+        alert(year + " khong phai nam nhuan")
+    }
+</script>
+</body>
+</html>
